@@ -1,4 +1,4 @@
-title: .Harun Armut
+title: Harun Armut
 author: 
 email: harunarmut0@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
@@ -19,6 +19,10 @@ texture:
   style: green
   showNav: false
   showPicker: false
+  analytics_id: UA-113157212-4
+
+
+
 
   # generate social links in footer
   social_links:
