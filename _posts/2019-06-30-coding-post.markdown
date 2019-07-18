@@ -1,16 +1,16 @@
 ---
 layout: post
 title: 'SUID Executables - Basic Linux Privilage Escalation '
-description: An example post which shows code rendering.
-date: '2019-05-23 21:03:36 +0530'
-categories: Javascript NodeJS
+description: Basic Linux Privilage Escalation
+date: '2019-07-18 21:03:36 +0530'
+categories: Privilage Escalation
 published: true
 ---
 
 SUID and GUID are useful features when  unprivilaged users are needed to access a program. With them, if unprivileged user access files which are set suid, files run with its owner permissions. Also, guid is similar to suid. In this time program runs with groups permissions.
 For example; when user "thomas" runs below file, file run with intern privileges because of suids.
 
-![Screenshot from 2019-07-18 14-41-08.png]({{site.baseurl}}/_posts/Screenshot from 2019-07-18 14-41-08.png)
+![Screenshot from 2019-07-18 14-41-08.png]({{site.baseurl}}/pics/pic1.png)
 
 
 To give suid ,guid can be run below command.
