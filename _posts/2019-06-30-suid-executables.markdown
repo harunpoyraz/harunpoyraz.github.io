@@ -10,7 +10,7 @@ published: true
 SUID and GUID are useful features when  unprivilaged users are needed to access a program. With them, if unprivileged user access files which are set suid, files run with its owner permissions. Also, guid is similar to suid. In this time program runs with groups permissions.
 For example; when user "thomas" runs below file, file run with intern privileges because of suids.
 
-![Screenshot from 2019-07-18 14-41-08.png]({{site.baseurl}}/pics/pic1.png)
+![pic1.png]({{site.baseurl}}/pics/pic1.png)
 
 
 To give suid ,guid can be run below command.
