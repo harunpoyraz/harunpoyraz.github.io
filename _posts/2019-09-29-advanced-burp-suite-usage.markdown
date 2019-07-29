@@ -5,7 +5,6 @@ description: Burp Suite
 date: '2019-07-29 21:03:36 +0530'
 categories: Burp Suite
 published: true
-slides: simple
 ---
 
 <style>
