@@ -16,4 +16,6 @@ published: true
 <!-- Google embed ends -->
 </div>
 
+Some of information are get from Jason Haddix slides
+https://repo.zenk-security.com/Techniques%20d.attaques%20%20.%20%20Failles/Pentesting%20With%20Burp%20Suite.pdf#page=2&zoom=auto,-227,397
 
