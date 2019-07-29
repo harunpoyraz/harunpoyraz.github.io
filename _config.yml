@@ -14,7 +14,7 @@ sass:
 permalink: /posts/:title/
 texture:
   title: Harun Armut
-  tagline: Student - <a href="mailto:harunarmut0@gmail.com">Contact me</a>
+  tagline: Student - <a href="mailto:harunarmut0@gmail.com" style="color: white;">Contact me</a>
   date_format: "%b %-d, %Y"
   style: green
   showNav: false
