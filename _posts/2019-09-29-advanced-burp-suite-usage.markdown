@@ -16,7 +16,7 @@ published: true
 <!-- Google embed ends -->
 </div>
 <br><br>
-Some of information are get from Jason Haddix slides <br>
-[https://repo.zenk-security.com/Techniques%20d.attaques%20%20.%20%20Failles/Pentesting%20With%20Burp%20Suite.pdf#page=2&zoom=auto,-227,397](Jason Haddix Slides)
+Some of information are get from 
+[Jason Haddix Slides](https://repo.zenk-security.com/Techniques%20d.attaques%20%20.%20%20Failles/Pentesting%20With%20Burp%20Suite.pdf#page=2&zoom=auto,-227,397)  <br>
 
 
