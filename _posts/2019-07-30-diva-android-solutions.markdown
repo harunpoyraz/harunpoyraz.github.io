@@ -2,7 +2,7 @@
 layout: post
 title: 'Diva Android Solutions '
 description: DIVA Android - Damn Insecure and vulnerable App for Android
-date: '2019-07-30 21:03:36 +0530'
+date: '2019-07-30 12:03:36 +0530'
 categories: Solutions
 published: true
 ---
