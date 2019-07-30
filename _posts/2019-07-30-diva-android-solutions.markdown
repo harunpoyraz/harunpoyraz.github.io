@@ -7,8 +7,6 @@ categories: Solutions
 published: true
 ---
 
-## Diva Android Solutions
-
 DIVA (Damn insecure and vulnerable App) is an App intentionally designed to be insecure. The aim of the App is to teach developers/QA/security professionals, flaws that are generally present in the Apps due poor or insecure coding practices.
 
 
