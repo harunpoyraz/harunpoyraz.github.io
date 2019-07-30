@@ -105,37 +105,51 @@ In these example, develpher tore data in tmp file which starts with uinfo.
 adb pull /data/data/jakhar.aseem.diva/uinfo-493535252tmp
 cat uinfo-493535252tmp
 ```
-![png]({{site.baseurl}}/pics/ 	indata3code.png)
+![png]({{site.baseurl}}/pics/indata3code.png)
 
 ## Insecure Data Storage 4
+![png]({{site.baseurl}}/pics/indata4main.png)
 
 These time data stored in different directory. To Read file we go location of $EXTERNAL_STORAGE variable.
 ```bash
 echo $EXTERNAL_STORAGE
 .uinfo.txt
 ```
-
+![png]({{site.baseurl}}/pics/indata4code.png)
 
 ## Input Validation Issues 1
 	
+![png]({{site.baseurl}}/pics/input1main.png)	
+	 	
 When working with databases valitating input so critical. I fit not done properly or not used properly sql injecttion vulnerability occurs. Below input returns  alll results n table.
+
+![png]({{site.baseurl}}/pics/input_valiatecode.png)
+
+![png]({{site.baseurl}}/pics/inpur val1 resu.png)
+
 ```bash
 	' or 1=1 --
 ```
 
 
 ## Input Validation Issues 2
-
+![png]({{site.baseurl}}/pics/inputval2maiin.png)
 Also file  inclusion vulnerabilities can be found  in mobile application. In example we can read local files by fiving them.
 ```bash
 file:///data/data/jakhar.aseem.diva/lib/libdivajni.so
 ```
+
+![png]({{site.baseurl}}/pics/inputval2res.png)
+
 ## Access Control Issues
+![png]({{site.baseurl}}/pics/access1main.png)
+
 Activities opened by intents and sometimes these activities are not secured. So they can can be called directly.
 
 To do these we use drozer .To download and setup it you can use following link
 https://github.com/mwrlabs/drozer
 
+![png]({{site.baseurl}}/pics/acces1result.png)
 
 ```bash	
 activity intent 
@@ -144,14 +158,11 @@ jakhar.aseem.diva.APICredsActivity
 run app.activity.start --component jakhar.aseem.diva jakhar.aseem.diva.APICredsActivity
 ```
 
-## Access Control Issues 2
-
-VEETER API Key: secrettveeterapikey\nAPI User name: diva2\nAPI Password: p@ssword2
-
-
-
 
 ## Access Control Issues 3
+
+
+![png]({{site.baseurl}}/pics/access3main.png)
 Like activities, broviders can leake information. 
 ```bash	
 run app.provider.info -a jakhar.aseem.diva
@@ -159,25 +170,30 @@ run scanner.provider.finduris -a jakhar.aseem.diva
 run scanner.provider.sqltables -a content://jakhar.aseem.diva.provider.notesprovider/notes/
 run app.provider.query content://jakhar.aseem.diva.provider.notesprovider/notes/
 ```
-
+![png]({{site.baseurl}}/pics/acces3result.png)
 
 ## Hardcoding Issues 2
 
 These time critical insormation is in libraries.
+
+![png]({{site.baseurl}}/pics/hard2main.png)
 
 ```bash	
 adb pull lib/lib.so
 strings
 olsdfgad;lh
 ```
+![png]({{site.baseurl}}/pics/hard2code.png)
+![png]({{site.baseurl}}/pics/hard2code2.png)
 
+![png]({{site.baseurl}}/pics/hardcode2result.png)
 
 ## Input Validation Issues 3
 
+![png]({{site.baseurl}}/pics/access3main.png)
 Example includes overflow vulnerability.
 To crach app we try each time more character.
 When reached maximum app will crash.
-
 
 ```bash	pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
 ```
