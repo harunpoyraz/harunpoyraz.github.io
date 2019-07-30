@@ -21,7 +21,7 @@ DIVA (Damn insecure and vulnerable App) is an App intentionally designed to be i
 
 ![png]({{site.baseurl}}/pics/insecure.png)
 
-Develophers use logs to debug their applications. Leaking information in logs is general situation and can be found any system. In android, we can read logs from adb logcat command. Then when we look logs we see our application leakes our credit card number in logs.
+Developers use logs to debug their applications. Leaking information in logs is a general situation and can be found in any system. In android, we can read logs from adb logcat command. Then when we look logs we see our application leaks our credit card number in logs.
  
  
 ```bash
@@ -43,14 +43,14 @@ which stores credit card number.
 
 ![png]({{site.baseurl}}/pics/hardcodemain.png)
 
-Sometimes develophers uses critical information as hard-coded. In these example hardcoded part in apk files.
+Sometimes developers use critical information as hard-coded. In this example hardcoded part in apk files.
 To get apk  from our phone we use adb pull.
-Then we use bytecodeviewer to open it. When we goto  related class HardcodeActivity we see blow result. Vendor secret leaked. 
+Then we use bytecode viewer to open it. When we goto  related class HardcodeActivity we see blow result. Vendor secret leaked. 
 
 ![png]({{site.baseurl}}/pics/hardcode.png)
 
 adb pull apk
-bytecodeviever
+bytecodeviewer
 vendorsecretkey
 
 
@@ -58,7 +58,7 @@ vendorsecretkey
 
 ![png]({{site.baseurl}}/pics/indata1main.png)
 
-These time credentials stored in shared preferences which gives oppurtunity to store small information in xml files. It is stored in shared_prefs directory.
+These time credentials stored in shared preferences which allow storing small information in xml files. It is stored in shared_prefs directory.
   ```bash 
 adb shell
 cd data/data/jakhar.aseem.diva/
@@ -85,7 +85,7 @@ jakhar.aseem.diva_preferences.xml
 ## Insecure Data Storage 2
 ![png]({{site.baseurl}}/pics/indata2main.png)
 
-Common method to store data is using databases. In these example data  stored in sqlite databses plaintext.
+Common method to store data is using databases. In these example data  stored in sqlite databases plaintext.
 To check database we download  by adb pull and open by sqlitebrowser.
 
 ```bash
@@ -99,7 +99,7 @@ sqlitebrowser ids2
 
 ![png]({{site.baseurl}}/pics/indata3main.png)
 
-In these example, develpher tore data in tmp file which starts with uinfo.
+In this example, developer store data in tmp file which starts with uinfo.
 
 
 ```bash
@@ -111,7 +111,7 @@ cat uinfo-493535252tmp
 ## Insecure Data Storage 4
 ![png]({{site.baseurl}}/pics/indata4main.png)
 
-These time data stored in different directory. To Read file we go location of $EXTERNAL_STORAGE variable.
+These time data stored in a different directory. To Read file we go the location of $EXTERNAL_STORAGE variable.
 ```bash
 echo $EXTERNAL_STORAGE
 .uinfo.txt
@@ -122,7 +122,7 @@ echo $EXTERNAL_STORAGE
 	
 ![png]({{site.baseurl}}/pics/input1main.png)	
 	 	
-When working with databases valitating input so critical. I fit not done properly or not used properly sql injecttion vulnerability occurs. Below input returns  alll results n table.
+When working with databases validating input so critical. I fit not done properly or not used properly sql injection vulnerability occurs. Below input returns  all results in table.
 
 ![png]({{site.baseurl}}/pics/input_valiatecode.png)
 
@@ -135,7 +135,7 @@ When working with databases valitating input so critical. I fit not done properl
 
 ## Input Validation Issues 2
 ![png]({{site.baseurl}}/pics/inputval2maiin.png)
-Also file  inclusion vulnerabilities can be found  in mobile application. In example we can read local files by fiving them.
+Also file  inclusion vulnerabilities can be found  in the mobile application. In the example we can read local files by fiving them.
 ```bash
 file:///data/data/jakhar.aseem.diva/lib/libdivajni.so
 ```
@@ -145,9 +145,9 @@ file:///data/data/jakhar.aseem.diva/lib/libdivajni.so
 ## Access Control Issues
 ![png]({{site.baseurl}}/pics/access1main.png)
 
-Activities opened by intents and sometimes these activities are not secured. So they can can be called directly.
+Activities opened by intents and sometimes these activities are not secured. So they can be called directly.
 
-To do these we use drozer .To download and setup it you can use following link
+To do these we use drozer .To download and setup it, you can use following link
 https://github.com/mwrlabs/drozer
 
 ![png]({{site.baseurl}}/pics/acces1result.png)
@@ -164,7 +164,7 @@ run app.activity.start --component jakhar.aseem.diva jakhar.aseem.diva.APICredsA
 
 
 ![png]({{site.baseurl}}/pics/access3main.png)
-Like activities, broviders can leake information. 
+Like activities, providers can leak information. 
 ```bash	
 run app.provider.info -a jakhar.aseem.diva
 run scanner.provider.finduris -a jakhar.aseem.diva
@@ -193,7 +193,7 @@ olsdfgad;lh
 
 ![png]({{site.baseurl}}/pics/access3main.png)
 
-Example includes overflow vulnerability.
+The example includes overflow vulnerability.
 To crach app we try each time more character.
 When reached maximum app will crash.
 
