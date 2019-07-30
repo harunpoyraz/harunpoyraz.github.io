@@ -20,7 +20,7 @@ published: true
 
 ![png]({{site.baseurl}}/pics/insecure.png)
 
-	Develophers use logs to debug their applications. Leaking information in logs is general situation and can be found any system. In android, we can read logs from adb logcat command. Then when we look logs we see our application leakes our credit card number in logs.
+Develophers use logs to debug their applications. Leaking information in logs is general situation and can be found any system. In android, we can read logs from adb logcat command. Then when we look logs we see our application leakes our credit card number in logs.
  
  
 ```bash
@@ -31,49 +31,51 @@ cat out.txt | grep diva
 ![png]({{site.baseurl}}/pics/insecure-2.png)
 
 ![png]({{site.baseurl}}/pics/insecure1code.png)
-   When we look at the code the problematic part is that
-   ```java 
-	Log.e("diva-log", "Error while processing transaction with credit card: " + localEditText.getText().toString());
+When we look at the code the problematic part is that
+  ```java 
+Log.e("diva-log", "Error while processing transaction with credit card: " + localEditText.getText().toString());
 ```
 which stores credit card number.
 
 
 ## Hardcoding Issues 1
-.hardcodemain
-	Sometimes develophers uses critical information as hard-coded. In these example hardcoded part in apk files.
-	To get apk  from our phone we use adb pull.
-	Then we use bytecodeviewer to open it. When we goto  related class HardcodeActivity we see blow result. Vendor secret leaked. 
 
-	.hardcode
+![png]({{site.baseurl}}/pics/hardcodemain.png)
+Sometimes develophers uses critical information as hard-coded. In these example hardcoded part in apk files.
+To get apk  from our phone we use adb pull.
+Then we use bytecodeviewer to open it. When we goto  related class HardcodeActivity we see blow result. Vendor secret leaked. 
+![png]({{site.baseurl}}/pics/hardcode.png)
 
-	adb pull apk
-	bytecodeviever
-	vendorsecretkey
+adb pull apk
+bytecodeviever
+vendorsecretkey
 
 
 ## Insecure Data Storage
 
-	.insecure1main
+![png]({{site.baseurl}}/pics/insecure.png.png)
 
-	These time credentials stored in shared preferences which gives oppurtunity to store small information in xml files. It is stored in shared_prefs directory.
+These time credentials stored in shared preferences which gives oppurtunity to store small information in xml files. It is stored in shared_prefs directory.
+  ```bash 
+adb shell
+cd data/data/jakhar.aseem.diva/
+ls
+cd shared_prefs/
+cat jakhar.aseem.diva_preferences.xml
+```
 
-	adb shell
-	cd data/data/jakhar.aseem.diva/
-	ls
-	cd shared_prefs/
-	cat jakhar.aseem.diva_preferences.xml
 
 
+/data/data/jakhar.aseem.diva/shared_prefs
 
-
-	/data/data/jakhar.aseem.diva/shared_prefs
-	jakhar.aseem.diva_preferences.xml
-	<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+jakhar.aseem.diva_preferences.xml
+```xml
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
 	<map>
 	    <string name="user">adadd</string>
 	    <string name="password">sdsdsdsd</string>
 	</map>
-
+```
 
 
 
