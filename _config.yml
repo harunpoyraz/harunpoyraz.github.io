@@ -1,6 +1,6 @@
-title: Harun Armut
+title: Harun Poyraz
 author: 
-email: harunarmut0@gmail.com
+email: harunpoyraz@protonmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   Personal Notes
 show_excerpts: true # set to true to show excerpts on the homepage
@@ -13,8 +13,8 @@ sass:
 
 permalink: /posts/:title/
 texture:
-  title: Harun Armut
-  tagline: Student - <a href="mailto:harunarmut0@gmail.com">Contact me</a>
+  title: Harun Poyraz
+  tagline: Student - <a href="mailto:harunpoyraz@protonmail.com">Contact me</a>
   date_format: "%b %-d, %Y"
   style: green
   showNav: false
@@ -26,8 +26,8 @@ texture:
 
   # generate social links in footer
   social_links:
-    linkedIn: in/harunarmut
-    github: harunarmut
+    linkedIn: in/harunpoyraz
+    github: harunpoyraz
     rss: rss
  
 
